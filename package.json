@@ -1,0 +1,12 @@
+{
+  "name": "cre_automated_testing_basics_in_javascript",
+  "version": "1.0.0",
+  "description": "[CRE]  Automated Testing Basics in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hencz István",
+  "license": "ISC"
+}
