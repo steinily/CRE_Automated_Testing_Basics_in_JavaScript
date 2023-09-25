@@ -1,0 +1,14 @@
+{
+  "name": "unit_test_course_lecture",
+  "version": "1.0.0",
+  "description": "Unit testing example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.50.0"
+  }
+}
