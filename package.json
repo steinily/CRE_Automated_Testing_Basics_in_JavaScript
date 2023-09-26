@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Hencz István",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^8.16.15"
+  }
 }
