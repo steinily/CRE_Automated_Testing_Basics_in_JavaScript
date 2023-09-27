@@ -1,0 +1,54 @@
+Describe + Test ID;Test Type;Test Data;Test Description;Expected Outcome;Pass/Fail
+getEvenNumbersFromArray Positive Test - 1;Positive;[2, 6, 11, 22];It should return an array of even numbers;[2, 6, 22];Pass
+getEvenNumbersFromArray Positive Test - 2;Positive;[1, 3, 11, 21];It should return an empty array if there are no even numbers;[];Pass
+getEvenNumbersFromArray Positive Test - 3;Positive;[0, 0, 0, 0];It should return an array of "zero" if provided by an array full of "zero";[0, 0, 0, 0];Pass
+getEvenNumbersFromArray Positive Test - 4;Positive;[-2, 6, 11, -22];It should return an array of even numbers if negative numbers provided;[-2, 6, -22];Pass
+getEvenNumbersFromArray Positive Test - 5;Positive;;It should return an empty array when the provided array is empty;[];Pass
+getEvenNumbersFromArray Positive Test - 6;Positive;[2];It should return an array with a single even number;[2];Pass
+getEvenNumbersFromArray Positive Test - 7;Positive;[1.5, 2.25, 3.75];It should return an empty array when input contains only non-integer numbers;[];Pass
+getEvenNumbersFromArray Negativ Test - 8;Negative;[5, '2', 11, 22];It should throw an error if the array is not full of numbers;Error: [5,2,11,22] is not an array of "Numbers";Pass
+getEvenNumbersFromArray Negativ Test - 9;Negative;['a', '2', 'c', 'G'];It should throw an error if there are no numbers in the array;Error: [a,2,c,G] is not an array of "Numbers";Pass
+getEvenNumbersFromArray Negativ Test - 10;Negative;Its a string;It should throw an error if not provided an array;Error: [Its a string] is not an array of "Numbers";Pass
+getEvenNumbersFromArray Negativ Test - 11;Negative;[1, '2', 3, null];It should throw an error for an input array containing mixed types;Error: [1,2,3,] is not an array of "Numbers";Pass
+isAllNumbers Positive Test - 12;Positive;[2, 6, 11, 22];It should return true when provided an array of numbers;true;Pass
+isAllNumbers Positive Test - 13;Positive;[0, 0, 0, 0];It should return true when provided an array of zeros;true;Pass
+isAllNumbers Positive Test - 14;Positive;[-2, -6, -11, -22];It should return true when provided with a negative numbers array;true;Pass
+isAllNumbers Positive Test - 15;Positive;;It should return true when provided with an empty array;true;Pass
+isAllNumbers Positive Test - 16;Positive;[1.5, 2.25, 3.75];It should return true when all elements in the array are floating-point numbers;true;Pass
+isAllNumbers Positive Test - 17;Positive;[42];It should return true when the array contains only one number;true;Pass
+isAllNumbers Positive Test - 18;Positive;[1, 2, Infinity, 4];It should return true when at least one element in the array is Infinity;true;Pass
+isAllNumbers Positive Test - 19;Positive;[1, 2, NaN, 4];It should return true when at least one element in the array is NaN;true;Pass
+isAllNumbers Negative Test - 20;Negative;Hello World;It should throw an error if not an array is provided;Error: [Hello World] is not an array;Pass
+isAllNumbers Negative Test - 21;Negative;2;It should throw an error if not an array;Error: [2] is not an array;Pass
+isAllNumbers Negative Test - 22;Negative;[2, '3', 4, 'banana'];It should return false if the array is not full of numbers;false;Pass
+isAllNumbers Negative Test - 23;Negative;[1, 2, 3, null];It should return false when the array contains a null element;false;Pass
+isAllNumbers Negative Test - 24;Negative;[1, 2, 3, undefined];It should return false when the array contains an undefined element;false;Pass
+isInteger Positive Test - 25;Positive;Positive random number;It should return true when provided with positive number;true;Pass
+isInteger Positive Test - 26;Positive;Negative random number;It should return true when provided with negative number;true;Pass
+isInteger Positive Test - 27;Positive;Zero;It should return true when provided with Zero;true;Pass
+isInteger Negativ Test - 28;Negative;Positive decimal number;It should return false when provided with positive decimal number;false;Pass
+isInteger Negativ Test - 29;Negative;Negative decimal number;It should return false when provided with negative decimal number;false;Pass
+isInteger Negativ Test - 30;Negative;Invalid input: string;It should throw an error when provided with a string;Error: [banana] is not a number;Pass
+isInteger Negativ Test - 31;Negative;Invalid input: object;It should throw an error when provided with an object;Error: [[object Object]] is not a number;Pass
+isInteger Negativ Test - 32;Negative;Invalid input: array;It should throw an error when provided with an array;Error: [] is not a number;Pass
+isInteger Negativ Test - 33;Negative;Infinity;It should return false when provided with Infinity;false;Pass
+isInteger Negativ Test - 34;Negative;NaN;It should return true when provided with NaN;false;Pass
+isInteger Negativ Test - 35;Negative;Null;It should throw an error when provided with Null;Error: [] is not a number;Pass
+isInteger Negativ Test - 36;Negative;Undefined;It should throw an error when provided with undefined;Error: [] is not a number;Pass
+isNumberEven Positive Test - 37;Positive;Positive random even number;It should return true when provided with positive even number;true;Pass
+isNumberEven Positive Test - 38;Positive;Positive random odd number;It should return false when provided with positive odd number;false;Pass
+isNumberEven Positive Test - 39;Positive;Zero;It should return true when provided with number zero;true;Pass
+isNumberEven Positive Test - 40;Positive;Negative random even number;It should return true when provided with negative even number;true;Pass
+isNumberEven Positive Test - 41;Positive;Negative random odd number;It should return false when provided with negative odd number;false;Pass
+isNumberEven Positive Test - 42;Positive;Positive decimal even number;It should return true for positive decimal even numbers;true;Pass
+isNumberEven Negative Test - 43;Negative;Hello World;It should throw an error message when provided with string;Error: [Hello World] is not of type "Number" it is of type "string";Pass
+isNumberEven Negative Test - 44;Negative;Number as string;It should throw an error message when provided with number as a string;Error: [4] is not of type "Number" it is of type "string";Pass
+isNumberEven Negative Test - 45;Negative;Array;It should throw an error message when provided with an array;Error: [1,2,3,4] is not of type "Number" it is of type "object";Pass
+isNumberEven Negative Test - 46;Negative;Null;It should throw an error message when provided with Null;Error: [null] is not of type "Number" it is of type "object";Pass
+isNumberEven Negative Test - 47;Negative;Undefined;It should throw an error message when provided with undefined;Error: [undefined] is not of type "Number" it is of type "undefined";Pass
+isNumberEven Negative Test - 48;Negative;NaN;It should throw an error message when provided with NaN;false;Pass
+isNumberEven Negative Test - 49;Negative;Positive decimal odd number;It should return false for positive decimal odd numbers;false;Pass
+isNumberEven Negative Test - 50;Negative;Positive Infinity;It should return false for Infinity;false;Pass
+isNumberEven Negative Test - 51;Negative;Negative Infinity;It should return false for negative Infinity;false;Pass
+isNumberEven Negative Test - 52;Negative;Empty array;It should throw an error message when provided with an empty array;Error: [] is not of type "Number" it is of type "object";Pass
+isNumberEven Negative Test - 53;Negative;Empty object;It should throw an error message when provided with an empty object;Error: [[object Object]] is not of type "Number" it is of type "object";Pass
