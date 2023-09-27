@@ -1,7 +1,7 @@
 {
   "name": "cre_automated_testing_basics_in_javascript",
   "version": "1.0.0",
-  "description": "[CRE]  Automated Testing Basics in JavaScript",
+  "description": "[CRE]  Automated Testing Basics in JavaScript - Unit tests home task",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
