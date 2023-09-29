@@ -1,12 +1,14 @@
 {
-  "name": "cre_automated_testing_basics_in_javascript",
-  "version": "1.0.0",
-  "description": "[CRE]  Automated Testing Basics in JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "wdio": "^6.0.1"
   },
-  "keywords": [],
-  "author": "Hencz István",
-  "license": "ISC"
+  "devDependencies": {
+    "@wdio/cli": "^8.16.16",
+    "@wdio/local-runner": "^8.16.16",
+    "@wdio/mocha-framework": "^8.16.15",
+    "@wdio/spec-reporter": "^8.16.12"
+  },
+  "scripts": {
+    "wdio": "wdio run ./src/config/wdio.conf.js"
+  }
 }
