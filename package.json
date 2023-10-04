@@ -22,6 +22,10 @@
     "wdio": "wdio run ./src/config/wdio.conf.js",
     "lint": "eslint . --fix",
     "format": "prettier --write \"**/*.js\"",
-    "report" : "allure generate allure-results --clean && allure open"
+    "report": "allure generate allure-results --clean && allure open",
+    "report:history": "mkdir -p report/allure-report/history allure-results/history && cp -a report/allure-report/history report/allure-results/"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.24.0"
   }
 }

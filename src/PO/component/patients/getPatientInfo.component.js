@@ -30,7 +30,7 @@ class GetPatienInfo extends BaseComponent {
      * @param {'name' | 'gender' | 'bloodGroup' | 'symptoms' | 'mobil' | 'email'} name - The information field to retrieve (e.g., 'name', 'gender', 'bloodGroup', etc.).
      * @return {WebdriverIO.Element} The element containing the requested patient information.
      */
-  lastAddedPatient(num, name) {
+  getPatientByRow(num, name) {
     const selectors = {
       name: '[aria-colindex="1"]',
       gender: '[aria-colindex="2"]',

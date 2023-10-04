@@ -70,11 +70,12 @@ describe('Patients List Page', () => {
     await browser.saveScreenshot('./src/Artifact/Add_new_patient_and_check_if_it_added.png');
     await expect(pages('patients').addNewPatient.rootElement).not.toBeDisplayed();
 
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'name')).toHaveText('John Doe');
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'gender')).toHaveText('Female');
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'bloodGroup')).toHaveText('O-');
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'mobil')).toHaveText('(062) 011-1223');
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'email')).toHaveText('testEmalAddress@testing.com');
-    await expect(pages('patients').getPatienInfo.lastAddedPatient(7, 'symptoms')).toHaveText('Fever , Stress , Pale Face');
+    lastPatient = (await pages('patients').getPatienInfo.patientListLength()) - 1;
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'name')).toHaveText('John Doe');
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'gender')).toHaveText('Female');
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'bloodGroup')).toHaveText('O-');
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'mobil')).toHaveText('(062) 011-1223');
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'email')).toHaveText('testEmalAddress@testing.com');
+    await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'symptoms')).toHaveText('Fever , Stress , Pale Face');
   });
 });

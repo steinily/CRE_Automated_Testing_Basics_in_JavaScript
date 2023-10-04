@@ -69,7 +69,7 @@ describe('Task 2 Add new scenarios', () => {
 
   it('SearchBar should filter patient list if name (Mercy) is entered', async () => {
     await pages('patients').patientList.searchInputField.setValue('Mercy');
-    expect(pages('patients').getPatienInfo.lastAddedPatient(0, 'name')).toHaveText('Mercy');
+    expect(pages('patients').getPatienInfo.getPatientByRow(0, 'name')).toHaveText('Mercy');
   });
 
   it('SearchBar should return empty list  if non existing name is entered.', async () => {
