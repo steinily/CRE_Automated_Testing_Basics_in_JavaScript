@@ -1,3 +1,4 @@
+const allure = require('allure-commandline');
 exports.config = {
     //
     // ====================
@@ -21,9 +22,7 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
-    specs: [
-        './../tests/**/*.tests.js'
-    ],
+    specs: ['./../tests/**/*.tests.js'],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -50,13 +49,15 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome',
-        browserVersion: 'stable',
-        'goog:chromeOptions': {
-            args: ['headless', 'disable-gpu','no-sandbox']
-        }
-    }],
+    capabilities: [
+        {
+            browserName: 'chrome',
+            browserVersion: 'stable',
+            'goog:chromeOptions': {
+                args: ['headless', 'disable-gpu', 'no-sandbox'],
+            },
+        },
+    ],
 
     //
     // ===================
@@ -127,15 +128,26 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: 'allure-results',
 
-    
+                disableWebdriverStepsReporting: true,
+
+                disableWebdriverScreenshotsReporting: false,
+            },
+        ],
+    ],
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000,
     },
     //
     // =====
@@ -189,9 +201,9 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-     before: function (capabilities, specs) {
-        browser.setWindowSize(1980, 1020)
-     },
+    before: function (capabilities, specs) {
+        browser.setWindowSize(1980, 1020);
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
@@ -232,8 +244,11 @@ exports.config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    //afterTest: async (test, context, result) => {
-    //},
+    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            await browser.takeScreenshot();
+        }
+    },
     /**
      * Hook that gets executed after the suite has ended
      * @param {object} suite suite details
@@ -274,13 +289,29 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+    onComplete: function () {
+        const reportError = new Error('Could not generate Allure report');
+        const generation = allure(['generate', 'allure-results', '--clean']);
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(() => reject(reportError), 5000);
+
+            generation.on('exit', function (exitCode) {
+                clearTimeout(generationTimeout);
+
+                if (exitCode !== 0) {
+                    return reject(reportError);
+                }
+
+                console.log('Allure report successfully generated');
+                resolve();
+            });
+        });
+    },
     /**
-    * Gets executed when a refresh happens.
-    * @param {string} oldSessionId session ID of the old session
-    * @param {string} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {string} oldSessionId session ID of the old session
+     * @param {string} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
-}
+};
