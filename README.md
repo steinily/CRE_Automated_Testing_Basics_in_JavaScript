@@ -55,3 +55,13 @@
 1.    execute() scenario is implemented
 2.    waitUntil() scenario is implemented
 3.    Browser actions scenario is implemented
+
+
+## NPM Scripts
+
+Here are the npm scripts available in this project:
+
+- `npm run wdio`: Run WebdriverIO tests using the configuration file located at `./src/config/wdio.conf.js`.
+- `npm run lint`: Run ESLint to check and fix code style issues in the project.
+- `npm run format`: Use Prettier to automatically format JavaScript files in the project.
+- `npm run report`: Generate and open an Allure report for the test results.

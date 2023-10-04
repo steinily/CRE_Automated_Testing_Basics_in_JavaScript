@@ -6,13 +6,13 @@ const BasePage = require('./basePage.page');
  * @extends {BasePage}
  */
 class DoctorPage extends BasePage {
-    /**
+  /**
      * Creates an instance of DoctorPage.
      * The page is accessed using the URL '/showcase/angular/appointmentplanner/#/doctors'.
      */
-    constructor() {
-        super('/showcase/angular/appointmentplanner/#/doctors');
-    }
+  constructor() {
+    super('/showcase/angular/appointmentplanner/#/doctors');
+  }
 }
 
 module.exports = DoctorPage;

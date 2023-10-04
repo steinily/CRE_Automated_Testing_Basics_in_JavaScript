@@ -11,24 +11,24 @@ const SchedulePage = require('./schedule.page');
  * @return {AbouthPage | DashboardPage | DoctorsPage | PatientPage | PreferencePage | SchedulePage}
  */
 function pages(name) {
-    const page = {
-        abouth: new AbouthPage(),
-        dashboard: new DashboardPage(),
-        doctors: new DoctorsPage(),
-        patients: new PatientPage(),
-        preference: new PreferencePage(),
-        schedule: new SchedulePage(),
-    };
+  const page = {
+    abouth: new AbouthPage(),
+    dashboard: new DashboardPage(),
+    doctors: new DoctorsPage(),
+    patients: new PatientPage(),
+    preference: new PreferencePage(),
+    schedule: new SchedulePage(),
+  };
 
-    return page[name.toLowerCase()];
+  return page[name.toLowerCase()];
 }
 
 module.exports = {
-    AbouthPage,
-    DashboardPage,
-    DoctorsPage,
-    PatientPage,
-    PreferencePage,
-    SchedulePage,
-    pages,
+  AbouthPage,
+  DashboardPage,
+  DoctorsPage,
+  PatientPage,
+  PreferencePage,
+  SchedulePage,
+  pages,
 };

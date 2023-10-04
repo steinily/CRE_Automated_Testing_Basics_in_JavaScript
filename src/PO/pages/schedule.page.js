@@ -7,13 +7,13 @@ const BasePage = require('./basePage.page');
  * @extends {BasePage}
  */
 class SchedulePage extends BasePage {
-    /**
+  /**
      * Creates an instance of SchedulePage.
      * The page is accessed using the URL '/showcase/angular/appointmentplanner/#/calendar'.
      */
-    constructor() {
-        super('/showcase/angular/appointmentplanner/#/calendar');
-    }
+  constructor() {
+    super('/showcase/angular/appointmentplanner/#/calendar');
+  }
 }
 
 module.exports = SchedulePage;

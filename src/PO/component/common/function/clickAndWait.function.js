@@ -7,8 +7,8 @@
  * @throws {Error} Throws an error if the element is not found or cannot be clicked.
  */
 async function clickAndWait(selector) {
-    await browser.$(selector).waitForClickable({ reverse: false });
-    await browser.$(selector).click();
+  await browser.$(selector).waitForClickable({reverse: false});
+  await browser.$(selector).click();
 }
 
-module.exports = { clickAndWait };
+module.exports = {clickAndWait};
