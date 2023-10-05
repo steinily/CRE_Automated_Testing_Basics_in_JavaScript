@@ -7,13 +7,13 @@ const BasePage = require('./basePage.page');
  * @extends {BasePage}
  */
 class Preference extends BasePage {
-  /**
+    /**
      * Creates an instance of Preference.
      * The page is accessed using the URL '/showcase/angular/appointmentplanner/#/preference'.
      */
-  constructor() {
-    super('/showcase/angular/appointmentplanner/#/preference');
-  }
+    constructor() {
+        super('/showcase/angular/appointmentplanner/#/preference');
+    }
 }
 
 module.exports = Preference;

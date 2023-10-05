@@ -11,8 +11,8 @@
  * @property {string} email - The patient's email address.
  */
 function addPatient(newPatientData) {
-  browser.execute((newPatientData) => {
-    /* eslint-disable */
+    browser.execute((newPatientData) => {
+        /* eslint-disable */
         function add(data) {
             const newRow = document.createElement('tr');
             const body = document.querySelector('tbody:not(.e-hide)');
@@ -33,8 +33,8 @@ function addPatient(newPatientData) {
             body.appendChild(newRow);
         }
         /* eslint-enable */
-    add(newPatientData);
-  }, newPatientData);
+        add(newPatientData);
+    }, newPatientData);
 }
 
-module.exports = {addPatient};
+module.exports = { addPatient };
