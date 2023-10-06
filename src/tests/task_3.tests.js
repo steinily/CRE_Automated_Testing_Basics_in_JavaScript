@@ -18,7 +18,7 @@ describe('Task 3 tasks', () => {
         await browser.saveScreenshot('./src/Artifact/ExecuteBefore.png');
         await pages('patients').addPatient(data);
         await browser.saveScreenshot('./src/Artifact/ExecuteAfter.png');
-        let lastPatient = (await pages('patients').getPatienInfo.patientListLength()) - 1;
+        const lastPatient = (await pages('patients').getPatienInfo.patientListLength()) - 1;
         await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'name')).toHaveText('Varga');
     });
 
@@ -79,5 +79,4 @@ describe('Task 3 tasks', () => {
         await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'email')).toHaveText('testEmalAddress@testing.com');
         await expect(pages('patients').getPatienInfo.getPatientByRow(lastPatient, 'symptoms')).toHaveText('Fever , Stress , Pale Face');
     });
-
 });

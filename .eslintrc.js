@@ -18,7 +18,7 @@ module.exports = {
             },
         },
     ],
-    ignorePatterns: ['node_modules/*', 'out/*', 'allure-report/*', 'allure-results/*', 'src/config/*', 'package.*'],
+    ignorePatterns: ['node_modules/*', 'out/*', 'allure-report/*', 'allure-results/*', 'src/config/*'],
     parserOptions: {
         ecmaVersion: 'latest',
     },

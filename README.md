@@ -10,7 +10,7 @@
 3. Write at least 4 scenarios trying to use both XPath and CSS selectors
  
 
-
+./src/tests/task_1.tests.js
 
 
 ## ACCEPTANCE CRITERIA 
@@ -28,7 +28,7 @@
 2.    *Replace default click method with custom one that will wait for elements before clicking. 
 
 
-
+./src/tests/task_2.tests.js
 
 ## ACCEPTANCE CRITERIA 
 1.    4-5 new scenarios are created
@@ -44,7 +44,7 @@
 3.    Add scenario that utilizes browser actions
 
 
-
+./src/tests/task_3.tests.js
 
 ## BONUS
 4.    Add scenario that works with cookies and/or local storage
@@ -61,7 +61,7 @@
 
 Here are the npm scripts available in this project:
 
-- `npm run wdio`: Run WebdriverIO tests using the configuration file located at `./src/config/wdio.conf.js`.
+- `npm run test`: Run WebdriverIO test using the configuration file located at `./src/config/wdio.conf.js`.
 - `npm run lint`: Run ESLint to check and fix code style issues in the project.
 - `npm run format`: Use Prettier to automatically format JavaScript files in the project.
 - `npm run report`: Generate and open an Allure report for the test results.

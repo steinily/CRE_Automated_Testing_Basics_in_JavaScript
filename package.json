@@ -1,7 +1,7 @@
 {
-  "name": "Cre automated testing basics in javascript ui test task",
+  "name": "cre_automated_testing_basics_in_javascript_ui_test_task",
   "version": "1.0.0",
-  "description": "[CRE]  Automated Testing Basics in JavaScrip",
+  "description": "[CRE]  Automated Testing Basics in JavaScrip UI Test Tasks",
   "keywords": [],
   "author": "Hencz István",
   "license": "ISC",
@@ -16,16 +16,18 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-wdio": "^8.8.7",
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "allure-commandline": "^2.24.0"
   },
   "scripts": {
-    "wdio": "wdio run ./src/config/wdio.conf.js",
+    "test": "wdio run ./src/config/wdio.conf.js",
+    "test:headless": "wdio run ./src/config/wdio.conf.js --headless=new --disable-gpu --no-sandbox" , 
     "lint": "eslint . --fix",
     "format": "prettier --write \"**/*.js\"",
     "report": "allure generate allure-results --clean && allure open",
     "report:history": "mkdir -p report/allure-report/history allure-results/history && cp -a report/allure-report/history report/allure-results/"
   },
   "dependencies": {
-    "allure-commandline": "^2.24.0"
+    
   }
 }

@@ -18,9 +18,7 @@ function addPatient(newPatientData) {
             const body = document.querySelector('tbody:not(.e-hide)');
             const { id, patientName, gender, bloodtype, sympthoms, phone, email } = data;
             newRow.innerHTML = `<tr role="row" class="e-row" aria-rowindex="0" data-uid="grid-row51">
-            <td class="e-rowcell" role="gridcell" tabindex="-1" aria-label="1 column header ID" aria-colindex="0" index="0" style="text-align: left;">${String(
-                id,
-            )}</td>
+            <td class="e-rowcell" role="gridcell" tabindex="-1" aria-label="1 column header ID" aria-colindex="0" index="0" style="text-align: left;">${String(id)}</td>
             <td class="e-rowcell e-templatecell" role="gridcell" tabindex="-1" aria-label=" is template cell column header Name" aria-colindex="1" index="0" style="text-align: left;">
             <span class="patient-name">${patientName}</span></td>
             <td class="e-rowcell" role="gridcell" tabindex="-1" aria-label="Female column header Gender" aria-colindex="2" index="0" style="text-align: left;">${gender}</td>
