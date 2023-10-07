@@ -1,12 +1,33 @@
 {
-  "name": "cre_automated_testing_basics_in_javascript",
+  "name": "cre_automated_testing_basics_in_javascript_ui_test_task",
   "version": "1.0.0",
-  "description": "[CRE]  Automated Testing Basics in JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "[CRE]  Automated Testing Basics in JavaScrip UI Test Tasks",
   "keywords": [],
   "author": "Hencz István",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.16.17",
+    "@wdio/cli": "^8.16.16",
+    "@wdio/local-runner": "^8.16.16",
+    "@wdio/mocha-framework": "^8.16.15",
+    "@wdio/spec-reporter": "^8.16.12",
+    "allure-commandline": "^2.24.0",
+    "eslint": "^8.50.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-wdio": "^8.8.7",
+    "prettier": "3.0.3"
+  },
+  "scripts": {
+    "test": "wdio run ./src/config/wdio.conf.js",
+    "test:headless": "wdio run ./src/config/wdio.conf.js --headless=new --disable-gpu --no-sandbox",
+    "lint": "eslint . --fix",
+    "format": "prettier --write \"**/*.js\"",
+    "report": "allure generate allure-results --clean && allure open",
+    "report:history": "mkdir -p report/allure-report/history allure-results/history && cp -a report/allure-report/history report/allure-results/"
+  },
+  "dependencies": {
+    "dependencies": "^0.0.1"
+  }
 }
