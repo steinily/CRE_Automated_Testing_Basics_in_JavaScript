@@ -24,21 +24,34 @@ class DynamicControlPage extends BaseComponent {
     }
     /** @public */
     get addBtn(){
-        return this.rootElement.$(`button:contains(Add)`)
+        return this.rootElement.$(`//button[contains(text(), "Add")]`)
     }
     /** @public */
     get removeBtn(){
         return this.rootElement.$(`//button[contains(text(), "Remove")]`)
     }
+
+    /** @public */
+    get enableBtn(){
+        return this.rootElement.$(`//button[contains(text(), "Enable")]`)
+    }
+    /** @public */
+    get disableBtn(){
+        return this.rootElement.$(`//button[contains(text(), "Disable")]`)
+    }
+
     /** @public */
     get loading(){
         return this.rootElement.$('#checkbox-example').$('[id="loading"]')
     }
-
-    waitAndClick(){
-        this.addBtn.waitForClickable()
-        this.addBtn.click()
+     /** @public */
+    get message(){
+        return this.rootElement.$('#message')
     }
+    get inputText(){
+        return this.rootElement.$('input[type="text"]')
+    }
+    
 }
 
 module.exports = DynamicControlPage;

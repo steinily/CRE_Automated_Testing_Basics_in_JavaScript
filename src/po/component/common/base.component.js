@@ -3,6 +3,9 @@
  *
  * @class BaseComponent
  */
+const {customClick} = require('../function/custom-commands.function')
+
+
 class BaseComponent {
     /**
      * Creates an instance of BaseComponent.
@@ -11,6 +14,7 @@ class BaseComponent {
      */
     constructor(rootSelector) {
         this.rootSelector = rootSelector;
+        this.customClickFunc = customClick
     }
     /**
      * Gets the root DOM element of the component using the specified root selector.
@@ -21,6 +25,11 @@ class BaseComponent {
     get rootElement() {
         return $(this.rootSelector);
     }
+
+    async customClicker(element){
+       await this.customClickFunc(element);
+    }
+
 }
 
 module.exports = BaseComponent;

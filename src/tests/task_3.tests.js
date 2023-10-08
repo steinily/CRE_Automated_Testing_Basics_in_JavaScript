@@ -1,0 +1,2 @@
+const { targetPage } = require('./../po');
+
