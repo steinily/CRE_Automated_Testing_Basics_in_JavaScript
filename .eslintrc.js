@@ -16,5 +16,5 @@ module.exports = {
         'func-names': 'off',
         'object-curly-newline': 'off',
     },
-    ignorePatterns: ['node_modules/', 'mochawesome-report/', 'coverage/'],
+    ignorePatterns: ['node_modules/', 'mochawesome-report/', 'coverage/' , 'allure-report/' , 'allure-results/'],
 };
