@@ -105,7 +105,6 @@ class AddNewPatient extends BaseComponent {
             genderfemale: '[for="doctorCheckFemale"]',
             gendermale: '[for="doctorCheckMale"]',
             dob: '[name="DOB"]',
-            bloodgroup: () => this.dropdownList('0-'),
             mobil: '#PatientMobile',
             email: '[name="Email"]',
             symptoms: '[name="Symptoms"]',
