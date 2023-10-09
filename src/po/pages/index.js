@@ -1,32 +1,28 @@
 const AddRemovePage = require('./addRemovePage.page');
 const BrokenImagePage = require('./brokenImagePage.page');
-const CheckBoxesPage = require('./checkBoxesPage.page');
-const DisappearingElementsPage = require('./disappearingElementsPage.page');
 const DragAndDropPage = require('./dragAndDropPage.page');
-const DropDownPage = require('./dropDownPage.page');
 const DynamicControlPage = require('./dynamicControlPage.page');
-const InputPage = require('./inputPage.page');
 const HomePage = require('./homePage.page');
 const TypoPage = require('./typoPage.page');
-const DynamicLoadingPage = require('./dynamicLoadingPage.page')
+const DynamicLoadingPage = require('./dynamicLoadingPage.page');
+const LoginPage = require('./loginPage.page');
+const SecurePage = require('./securePage.page');
 /**
  *
- * @param  {'add_remove' | 'brokenimage' | 'check_boxes'| 'disappearing_elements'| 'draganddrop'| 'dropdown'| 'dynamiccontrol'| 'input_page' | 'homePage' | 'typo' | 'dynamicloading'} name
- * @return {AddRemovePage | BrokenImagePage | CheckBoxesPage | DisappearingElementsPage | DragAndDropPage | DropDownPage | DynamicControlPage | InputPage | HomePage | TypoPage | DynamicLoadingPage}
+ * @param  {'addremove' | 'brokenimage' |'draganddrop'| 'dynamiccontrol'| 'homePage' | 'typo' | 'dynamicloading' | 'loginpage' | 'secure'} name
+ * @return {AddRemovePage | BrokenImagePage |  DragAndDropPage | DynamicControlPage | HomePage | TypoPage | DynamicLoadingPage | LoginPage | SecurePage}
  */
 function targetPage(name) {
     const page = {
-        add_remove: new AddRemovePage(),
+        addremove: new AddRemovePage(),
         brokenimage: new BrokenImagePage(),
-        check_boxes: new CheckBoxesPage(),
-        disappearing_elements: new DisappearingElementsPage(),
         draganddrop: new DragAndDropPage(),
-        dropdown: new DropDownPage(),
         dynamiccontrol: new DynamicControlPage(),
-        input_page: new InputPage(),
+        dynamicloading: new DynamicLoadingPage(),
         homepage: new HomePage(),
         typo: new TypoPage(),
-        dynamicloading: new DynamicLoadingPage()
+        loginpage: new LoginPage(),
+        secure: new SecurePage(),
     };
 
     return page[name.toLowerCase()];
@@ -35,14 +31,11 @@ function targetPage(name) {
 module.exports = {
     AddRemovePage,
     BrokenImagePage,
-    CheckBoxesPage,
-    DisappearingElementsPage,
     DragAndDropPage,
-    DropDownPage,
     DynamicControlPage,
-    InputPage,
     targetPage,
     HomePage,
     TypoPage,
     DynamicLoadingPage,
+    SecurePage,
 };

@@ -1,4 +1,5 @@
 const BasePage = require('./basePage.page');
+const { AddRemoveElementPage } = require('../component');
 /**
  *
  * @class InputPage
@@ -11,6 +12,7 @@ class AddRemovePage extends BasePage {
      */
     constructor() {
         super('/add_remove_elements/');
+        this.addRemoveElement = new AddRemoveElementPage();
     }
 }
 

@@ -1,5 +1,5 @@
 const BasePage = require('./basePage.page');
-const {DynamicControlPage} = require('../component') 
+const { DynamicControlPage } = require('../component');
 /**
  *
  * @class DynamicControls
@@ -12,7 +12,7 @@ class DynamicControls extends BasePage {
      */
     constructor() {
         super('/dynamic_controls');
-        this.dynamicControlPage = new DynamicControlPage()
+        this.dynamicControlPage = new DynamicControlPage();
     }
 }
 

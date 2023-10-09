@@ -64,7 +64,7 @@ describe('Typos site testing with different Css , Xpath selectors, and with Diff
         }
         await expect(targetPage('typo').typosPage.typosParagraph).toHaveText(paragraph);
     });
-    
+
     it('The second paragraph element should have typo after a page refresh', async () => {
         const paragraphTypo = "Sometimes you'll see a typo, other times you won,t.";
         let text = await targetPage('typo').typosPage.typosParagraph.getText();

@@ -1,5 +1,5 @@
 const BasePage = require('./basePage.page');
-const {DynamicElementPage} = require('../component') 
+const { DynamicElementPage } = require('../component');
 /**
  *
  * @class DynamicLoading
@@ -12,8 +12,7 @@ class DynamicLoading extends BasePage {
      */
     constructor() {
         super('dynamic_loading/1');
-        this.dynamicelement = new DynamicElementPage()
-
+        this.dynamicelement = new DynamicElementPage();
     }
 }
 

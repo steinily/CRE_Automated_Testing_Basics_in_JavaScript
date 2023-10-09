@@ -23,35 +23,35 @@ class DynamicControlPage extends BaseComponent {
         return this.rootElement.$("input[type='checkbox']");
     }
     /** @public */
-    get addBtn(){
-        return this.rootElement.$(`//button[contains(text(), "Add")]`)
+    get addBtn() {
+        return this.rootElement.$(`//button[contains(text(), "Add")]`);
     }
     /** @public */
-    get removeBtn(){
-        return this.rootElement.$(`//button[contains(text(), "Remove")]`)
+    get removeBtn() {
+        return this.rootElement.$(`//button[contains(text(), "Remove")]`);
     }
 
     /** @public */
-    get enableBtn(){
-        return this.rootElement.$(`//button[contains(text(), "Enable")]`)
+    get enableBtn() {
+        return this.rootElement.$(`//button[contains(text(), "Enable")]`);
     }
     /** @public */
-    get disableBtn(){
-        return this.rootElement.$(`//button[contains(text(), "Disable")]`)
+    get disableBtn() {
+        return this.rootElement.$(`//button[contains(text(), "Disable")]`);
     }
 
     /** @public */
-    get loading(){
-        return this.rootElement.$('#checkbox-example').$('[id="loading"]')
+    get loading() {
+        return this.rootElement.$('#checkbox-example').$('[id="loading"]');
     }
-     /** @public */
-    get message(){
-        return this.rootElement.$('#message')
+    /** @public */
+    get message() {
+        return this.rootElement.$('#message');
     }
-    get inputText(){
-        return this.rootElement.$('input[type="text"]')
+    /** @public */
+    get inputText() {
+        return this.rootElement.$('input[type="text"]');
     }
-    
 }
 
 module.exports = DynamicControlPage;

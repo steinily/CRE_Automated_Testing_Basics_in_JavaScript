@@ -1,5 +1,5 @@
 const BasePage = require('./basePage.page');
-const {BrokenImagePage} = require('../component') 
+const { BrokenImagePage } = require('../component');
 /**
  *
  * @class BrokenImage
@@ -12,7 +12,7 @@ class BrokenImage extends BasePage {
      */
     constructor() {
         super('/broken_images');
-        this.brokenImage = new BrokenImagePage()
+        this.brokenImage = new BrokenImagePage();
     }
 }
 

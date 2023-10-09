@@ -13,15 +13,14 @@ class DragAndDrop extends BaseComponent {
     constructor() {
         super('#content');
     }
- /** @public */
-    get aRectangle(){
-        return this.rootElement.$('#column-a')
+    /** @public */
+    get aRectangle() {
+        return this.rootElement.$('#column-a');
     }
- /** @public */
-    get bRectangle(){
-        return this.rootElement.$('#column-b')
+    /** @public */
+    get bRectangle() {
+        return this.rootElement.$('#column-b');
     }
-
 }
 
 module.exports = DragAndDrop;

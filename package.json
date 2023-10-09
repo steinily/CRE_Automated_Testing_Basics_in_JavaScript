@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "wdio run ./src/config/wdio.conf.js",
-    "test:headless": "wdio run ./src/config/wdio.conf.js --headless=new --disable-gpu --no-sandbox",
+    "test:headless": "wdio run ./src/config/wdio.conf.headless.js",
     "lint": "eslint . --fix",
     "format": "prettier --write \"**/*.js\"",
     "report": "allure generate allure-results --clean && allure open",

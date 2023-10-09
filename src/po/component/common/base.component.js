@@ -3,8 +3,7 @@
  *
  * @class BaseComponent
  */
-const {customClick} = require('../function/custom-commands.function')
-
+const { customClick } = require('../function/custom-commands.function');
 
 class BaseComponent {
     /**
@@ -14,7 +13,7 @@ class BaseComponent {
      */
     constructor(rootSelector) {
         this.rootSelector = rootSelector;
-        this.customClickFunc = customClick
+        this.customClickFunc = customClick;
     }
     /**
      * Gets the root DOM element of the component using the specified root selector.
@@ -25,11 +24,15 @@ class BaseComponent {
     get rootElement() {
         return $(this.rootSelector);
     }
-
-    async customClicker(element){
-       await this.customClickFunc(element);
+    /**
+     * Custom function to click on an element after waiting for it to be displayed and enabled.
+     *
+     * @param {WebdriverIO.Element} element - The element to click.
+     * @return {Promise<void>} - A promise that resolves after the click operation.
+     */
+    async customClicker(element) {
+        await this.customClickFunc(element);
     }
-
 }
 
 module.exports = BaseComponent;

@@ -13,13 +13,13 @@ class DynamicLoading extends BaseComponent {
     constructor() {
         super('.example');
     }
- /** @public */
-    get startBtn(){
-        return this.rootElement.$(`//button[contains(text(), "Start")]`)
+    /** @public */
+    get startBtn() {
+        return this.rootElement.$(`//button[contains(text(), "Start")]`);
     }
     /** @public */
-    get hiddenText(){
-        return this.rootElement.$('#finish h4')
+    get hiddenText() {
+        return this.rootElement.$('#finish h4');
     }
 }
 

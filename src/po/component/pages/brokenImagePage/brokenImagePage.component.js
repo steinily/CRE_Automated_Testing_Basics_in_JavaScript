@@ -13,17 +13,19 @@ class BrokenImage extends BaseComponent {
     constructor() {
         super('.example');
     }
- /** @public */
-    getImgByNum(num){
-        return this.rootElement.$$('img')[num]
-
+    /**
+     * Get an image element by its index within the collection of images.
+     *
+     * @param {number} num - The index of the image to retrieve (0-based).
+     * @return {WebdriverIO.Element} - The image element at the specified index.
+     */
+    getImgByNum(num) {
+        return this.rootElement.$$('img')[num];
     }
- /** @public */  
-    get getImg(){
-        return this.rootElement.$$('img')
-
+    /** @public */
+    get getImg() {
+        return this.rootElement.$$('img');
     }
-
 }
 
 module.exports = BrokenImage;
