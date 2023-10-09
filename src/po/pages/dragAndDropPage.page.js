@@ -1,4 +1,5 @@
 const BasePage = require('./basePage.page');
+const {DragAndDropPage} = require('../component') 
 /**
  *
  * @class DragAndDrop
@@ -11,6 +12,7 @@ class DragAndDrop extends BasePage {
      */
     constructor() {
         super('/drag_and_drop');
+        this.dragAndDrop = new DragAndDropPage()
     }
 }
 

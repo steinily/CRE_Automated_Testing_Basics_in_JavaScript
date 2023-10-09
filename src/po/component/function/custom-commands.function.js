@@ -6,6 +6,9 @@ async function customClick(element) {
     await element.click()
   }
 
+
+
 module.exports = {
     customClick,
+
 }
