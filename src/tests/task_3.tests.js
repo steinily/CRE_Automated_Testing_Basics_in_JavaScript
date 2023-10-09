@@ -91,7 +91,7 @@ describe('Dynamically Loaded Page Elements Page testing', () => {
     });
 });
 
-describe('Dynamically Loaded Page Elements Page testing', () => {
+describe('Broken Image Page Elements Page testing', () => {
     beforeEach(async () => {
         await targetPage('brokenimage').open();
     });
