@@ -62,6 +62,7 @@
 Here are the npm scripts available in this project:
 
 - `npm run test`: Run WebdriverIO test using the configuration file located at `./src/config/wdio.conf.js`.
+- `npm run test:headless`: Run WebdriverIO test using the configuration file located at `./src/config/wdio.conf.headless.js`.
 - `npm run lint`: Run ESLint to check and fix code style issues in the project.
 - `npm run format`: Use Prettier to automatically format JavaScript files in the project.
 - `npm run report`: Generate and open an Allure report for the test results.
